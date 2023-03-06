@@ -1,20 +1,28 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.download = void 0;
 const child_process_1 = require("child_process");
 const command = `rclone sync --update --transfers 8 --progress`;
 function download(from, to, options) {
-    console.log(`Downloading from ${from} to ${to}`);
-    if (options.verbose) {
-        console.info(arguments, options);
-    }
-    const script = `${command} "${from}" "${to}"`;
-    if (options.dryRun) {
-        console.info(`Would execute: ${script}`);
-        return;
-    }
-    options.verbose && console.info(`Execute: ${script}`);
-    (0, child_process_1.execSync)(script, { stdio: 'inherit' });
-    (0, child_process_1.execSync)(`${command} "${from}" "${to}"`, { stdio: 'inherit' });
+    return __awaiter(this, void 0, void 0, function* () {
+        console.log(`Downloading from ${from} to ${to}`);
+        const script = `${command} "${from}" "${to}"`;
+        if (options.dryRun) {
+            console.info(`Would execute: ${script}`);
+            return;
+        }
+        options.verbose && console.info(`Execute: ${script}`);
+        (0, child_process_1.execSync)(script, { stdio: 'inherit' });
+        (0, child_process_1.execSync)(`${command} "${from}" "${to}"`, { stdio: 'inherit' });
+    });
 }
 exports.download = download;

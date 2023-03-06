@@ -7,13 +7,9 @@ interface Options {
     verbose: boolean,
 }
 
-export function upload(from: string, to: string, options: Options) {
+export async function upload(from: string, to: string, options: Options) {
 
     console.log(`Uploading from ${from} to ${to}`)
-
-    if (options.verbose) {
-        console.info(arguments, options)
-    }
 
     const script = `${command} "${from}" "${to}"`
 
