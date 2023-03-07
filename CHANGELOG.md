@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/AnthonyPorthouse/mc-scripts/compare/v0.1.0...v0.2.0) (2023-03-07)
+
+
+### Miscellaneous Chores
+
+* release 0.2.0 ([2ba826a](https://github.com/AnthonyPorthouse/mc-scripts/commit/2ba826a55a03d764711cdb6d0c47fe575f9265b3))
+
 ## 0.1.0 (2023-03-07)
 
 
