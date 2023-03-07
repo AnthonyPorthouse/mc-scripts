@@ -2,8 +2,8 @@ import { homedir } from 'node:os'
 import { existsSync, readdirSync } from 'node:fs'
 import path from 'node:path'
 
-export function getPrismInstances(): string[] {
-    const locations = findPrismLocations()
+export function getMultiMcInstances(): string[] {
+    const locations = findMultiMcLocations()
 
     const instances: string[] = []
 
@@ -18,9 +18,9 @@ export function getPrismInstances(): string[] {
     return instances
 }
 
-export function findPrismLocations() {
+export function findMultiMcLocations() {
     const locations = [
-        path.join(homedir(), '/.var/app/org.prismlauncher.PrismLauncher/data/PrismLauncher/instances'),
+        path.join(homedir(), '.local/share/multimc/instances'),
     ]
 
     const foundLocations: string[] = [];
