@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/AnthonyPorthouse/mc-scripts/compare/v0.2.1...v0.2.2) (2023-03-07)
+
+
+### Bug Fixes
+
+* builds now correctly working ([aa23d1e](https://github.com/AnthonyPorthouse/mc-scripts/commit/aa23d1e3023e3e1a073c757e3e7e719b40358cee))
+
 ## [0.2.1](https://github.com/AnthonyPorthouse/mc-scripts/compare/v0.2.0...v0.2.1) (2023-03-07)
 
 
