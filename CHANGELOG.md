@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/AnthonyPorthouse/mc-scripts/compare/v0.2.2...v0.3.0) (2023-03-07)
+
+
+### Features
+
+* add minecraft launcher instance support ([c3c24ae](https://github.com/AnthonyPorthouse/mc-scripts/commit/c3c24ae6c3f9b42d85c6408707a7e291fad3a634))
+* add multimc support ([ca99717](https://github.com/AnthonyPorthouse/mc-scripts/commit/ca99717db7936900bb9cd26a8ea684936c786062))
+
 ## [0.2.2](https://github.com/AnthonyPorthouse/mc-scripts/compare/v0.2.1...v0.2.2) (2023-03-07)
 
 
