@@ -3,7 +3,7 @@ import { homedir } from "os";
 import { exit } from "process";
 import prompts from "prompts";
 import { stringify } from "yaml";
-import { getPrismInstances } from "../backends/prism";
+import { getInstances } from "../backends/instances";
 import { getRemotes } from "../backends/rclone";
 import config from "../config";
 
@@ -28,11 +28,11 @@ export async function init() {
       type: "select",
       name: "local",
       message: "Select Default local instance",
-      choices: getPrismInstances().map((instance) => ({
+      choices: getInstances().map((instance) => ({
         title: instance,
         value: instance,
       })),
-      initial: config?.config.defaults.local ? getPrismInstances().indexOf(config?.config.defaults.local) : 0,
+      initial: config?.config.defaults.local ? getInstances().indexOf(config?.config.defaults.local) : 0,
     },
   ], { onCancel() {
     exit(1)
