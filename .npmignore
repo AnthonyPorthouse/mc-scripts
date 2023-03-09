@@ -1,3 +1,6 @@
 src/
 !dist/
 .github
+rollup.config.mjs
+.eslintrc.js
+tsconfig.json

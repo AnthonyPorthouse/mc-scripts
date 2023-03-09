@@ -5,11 +5,11 @@ import { download } from "./actions/download";
 import {init} from "./actions/init";
 import { upload } from "./actions/upload";
 import config from "./config";
-import packageJson from '../package.json'
+import { version } from '../package.json'
 
 const app = new Command('mc-scripts')
 
-app.version(packageJson.version)
+app.version(version)
 
 app.command('config')
     .action(() => {
